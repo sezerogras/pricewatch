@@ -5,82 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PriceWatch | Fiyat Karşılaştırma ve Fiyat Takip Uygulaması</title>
 
+    <!-- META -->
+    <meta name="description" content="PriceWatch, farklı e-ticaret sitelerindeki ürün fiyatlarını tek ekranda karşılaştırmanızı ve fiyat değişimlerini takip etmenizi sağlayan modern bir fiyat takip uygulamasıdır.">
+    <meta name="robots" content="index, follow">
+
     <style>
+        :root {
+            --bg: #050816;
+            --bg-soft: #070b1f;
+            --card-bg: #0c1026;
+            --card-border: rgba(255, 255, 255, 0.06);
+            --accent: #4a63e7;
+            --accent-soft: rgba(74, 99, 231, 0.15);
+            --accent-strong: #7b5cff;
+            --text-main: #f9fafb;
+            --text-muted: #a5afc7;
+            --text-soft: #8c95af;
+            --radius-xl: 18px;
+            --radius-lg: 14px;
+            --shadow-soft: 0 22px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: "Inter", Arial, sans-serif;
-            background-color: #f5f6f8;
-            color: #2d2d2d;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", Arial, sans-serif;
+            background: radial-gradient(circle at top left, #1a1f3b 0, #050816 45%, #02040a 100%);
+            color: var(--text-main);
             line-height: 1.7;
         }
 
-        /* Header */
-        .hero {
-            padding: 90px 20px;
-            text-align: center;
-            background: #ffffff;
-            border-bottom: 1px solid #e3e3e3;
-        }
-
-        .hero h1 {
-            font-size: 46px;
-            font-weight: 800;
-            margin-bottom: 14px;
-            color: #1f1f1f;
-            letter-spacing: -0.5px;
-        }
-
-        .hero p {
-            font-size: 19px;
-            max-width: 750px;
-            margin: 0 auto;
-            color: #565656;
-        }
-
-        /* Section */
-        .section {
-            max-width: 900px;
-            margin: 50px auto;
-            background: #ffffff;
-            padding: 45px;
-            border-radius: 14px;
-            border: 1px solid #e4e4e4;
-        }
-
-        h2 {
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 25px;
-            color: #1f1f1f;
-        }
-
-        /* Feature list with soft color blocks */
-        .feature-list div {
-            padding: 16px 18px;
-            margin-bottom: 15px;
-            background: #f0f1f5;
-            border-radius: 10px;
-            font-size: 16px;
-            border: 1px solid #e1e1e1;
-        }
-
-        .feature-list div:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 70px;
-            text-align: center;
-            padding: 30px;
-            background: #ffffff;
-            border-top: 1px solid #e3e3e3;
-            font-size: 14px;
-            color: #6a6a6a;
-        }
-
         a {
-            color: #4a63e7;
+            color: var(--accent);
             text-decoration: none;
         }
 
@@ -88,66 +47,245 @@
             text-decoration: underline;
         }
 
-    </style>
-</head>
-<body>
+        .page-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-<!-- HERO -->
-<div class="hero">
-    <h1>PriceWatch</h1>
-    <p>
-        Farklı mağazalardaki ürün fiyatlarını tek ekranda karşılaştırmanıza ve fiyat düşüşlerini anlık olarak takip etmenize yardımcı olan modern bir mobil uygulama.
-    </p>
-</div>
+        .max-width {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 24px 20px 56px;
+        }
 
-<!-- ABOUT -->
-<div class="section">
-    <h2>PriceWatch Hakkında</h2>
-    <p>
-        <strong>PriceWatch</strong>, kullanıcıların çeşitli e-ticaret platformlarında ürün arayabildiği, fiyat
-        karşılaştırması yapabildiği ve fiyat değişim bildirimleri alabileceği bir mobil uygulamadır.
-    </p>
+        /* TOP NAV */
+        .top-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0 12px;
+        }
 
-    <p>
-        Uygulama geliştirme sürecindedir. Bu sayfa, Amazon Product Advertising API, Trendyol Partner API,
-        CJ Affiliate (Hepsiburada) ve diğer servislerin doğrulama ve entegrasyon süreçleri için hazırlanmıştır.
-    </p>
-</div>
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-<!-- FEATURES -->
-<div class="section">
-    <h2>Özellikler</h2>
+        .brand-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 12px;
+            background: radial-gradient(circle at 30% 10%, #ffffff 0, #c3d3ff 18%, #4a63e7 45%, #1a1f3b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            color: #050816;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+        }
 
-    <div class="feature-list">
-        <div>Birden fazla e-ticaret platformunda ürün arama desteği.</div>
-        <div>Farklı mağazalardaki fiyatları tek ekrandan karşılaştırma.</div>
-        <div>Favori ürünler için fiyat düşüş bildirimleri.</div>
-        <div>Kullanıcıyı daima ilgili mağazanın resmi ürün sayfasına yönlendirme.</div>
-        <div>Sade, hızlı ve modern mobil arayüz tasarımı.</div>
-    </div>
-</div>
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
 
-<!-- API INFORMATION -->
-<div class="section">
-    <h2>Planlanan API Entegrasyonları</h2>
+        .brand-text span:first-child {
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: -0.03em;
+        }
 
-    <ul>
-        <li>Amazon Product Advertising API</li>
-        <li>Trendyol Partner API</li>
-        <li>CJ Affiliate (Hepsiburada ürün feed'i)</li>
-        <li>n11 API</li>
-    </ul>
+        .brand-text span:last-child {
+            font-size: 12px;
+            color: var(--text-soft);
+        }
 
-    <p>
-        PriceWatch satış işlemi gerçekleştirmez. Tüm yönlendirmeler kullanıcıyı ilgili mağazanın kendi sayfasına taşır.
-    </p>
-</div>
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 13px;
+        }
 
-<!-- FOOTER -->
-<footer>
-    © 2025 PriceWatch • Tüm hakları saklıdır<br>
-    İletişim: <a href="mailto:ograssezer474@gmail.com">ograssezer474@gmail.com</a>
-</footer>
+        .nav-pill {
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(12, 16, 38, 0.85);
+            backdrop-filter: blur(10px);
+            color: var(--text-muted);
+        }
 
-</body>
-</html>
+        .nav-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: #16a34a;
+            box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.25);
+            margin-right: 6px;
+            display: inline-block;
+        }
+
+        /* HERO */
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            gap: 40px;
+            padding: 26px 0 12px;
+            align-items: center;
+        }
+
+        .hero-left-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 255, 0.35);
+            background: radial-gradient(circle at top left, rgba(120, 134, 255, 0.2), rgba(7, 11, 31, 0.95));
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: #d0dcff;
+            margin-bottom: 14px;
+        }
+
+        .hero-left-badge span.tag {
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(148, 163, 255, 0.3);
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-size: clamp(32px, 4vw, 40px);
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.05em;
+        }
+
+        .hero-title span.gradient {
+            background: linear-gradient(120deg, #a5b4fc, #e0e7ff, #7b5cff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 15px;
+            color: var(--text-muted);
+            max-width: 460px;
+            margin-bottom: 18px;
+        }
+
+        .hero-sub-sub {
+            font-size: 13px;
+            color: var(--text-soft);
+            max-width: 460px;
+            margin-bottom: 24px;
+        }
+
+        /* CTA */
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .btn-primary {
+            border: none;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+            color: #ffffff;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 18px 35px rgba(57, 83, 206, 0.62);
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+        }
+
+        .btn-primary span.icon {
+            font-size: 16px;
+            transform: translateY(0.5px);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 22px 42px rgba(57, 83, 206, 0.75);
+        }
+
+        .btn-ghost {
+            border-radius: 999px;
+            padding: 9px 15px;
+            border: 1px solid rgba(148, 163, 255, 0.28);
+            background: radial-gradient(circle at top left, rgba(148, 163, 255, 0.24), rgba(15, 23, 42, 0.9));
+            font-size: 13px;
+            color: #e2e8f0;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .btn-ghost .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: #22c55e;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--text-soft);
+        }
+
+        .hero-meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-meta-item span.badge {
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(148, 163, 255, 0.38);
+            font-size: 11px;
+        }
+
+        .hero-right {
+            background: radial-gradient(circle at top, rgba(148, 163, 255, 0.35), rgba(12, 16, 38, 0.9));
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(148, 163, 255, 0.4);
+            padding: 18px 18px 16px;
+            position: relative;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .hero-right-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            font-size: 11px;
+            color: #e5e7eb;
+        }
+
+        .hero-right-header span.left-label {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-weight: 600;
