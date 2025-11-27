@@ -9,70 +9,78 @@
         body {
             margin: 0;
             font-family: "Inter", Arial, sans-serif;
-            background-color: #f7f8fa;
-            color: #2a2a2a;
+            background-color: #f5f6f8;
+            color: #2d2d2d;
             line-height: 1.7;
         }
 
         /* Header */
         .hero {
-            padding: 80px 20px;
+            padding: 90px 20px;
             text-align: center;
             background: #ffffff;
-            border-bottom: 1px solid #e2e2e2;
+            border-bottom: 1px solid #e3e3e3;
         }
 
         .hero h1 {
-            font-size: 42px;
+            font-size: 46px;
             font-weight: 800;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
+            color: #1f1f1f;
+            letter-spacing: -0.5px;
         }
 
         .hero p {
-            font-size: 18px;
-            max-width: 700px;
+            font-size: 19px;
+            max-width: 750px;
             margin: 0 auto;
-            color: #555;
+            color: #565656;
         }
 
-        /* Content Section */
+        /* Section */
         .section {
             max-width: 900px;
             margin: 50px auto;
             background: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            border: 1px solid #e3e3e3;
+            padding: 45px;
+            border-radius: 14px;
+            border: 1px solid #e4e4e4;
         }
 
         h2 {
             font-size: 26px;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            color: #1f1f1f;
         }
 
+        /* Feature list with soft color blocks */
         .feature-list div {
-            padding: 14px 0;
-            border-bottom: 1px solid #ececec;
+            padding: 16px 18px;
+            margin-bottom: 15px;
+            background: #f0f1f5;
+            border-radius: 10px;
+            font-size: 16px;
+            border: 1px solid #e1e1e1;
         }
 
         .feature-list div:last-child {
-            border-bottom: none;
+            margin-bottom: 0;
         }
 
         /* Footer */
         footer {
-            margin-top: 60px;
+            margin-top: 70px;
             text-align: center;
-            padding: 25px;
+            padding: 30px;
             background: #ffffff;
-            border-top: 1px solid #e2e2e2;
-            color: #5a5a5a;
+            border-top: 1px solid #e3e3e3;
             font-size: 14px;
+            color: #6a6a6a;
         }
 
         a {
-            color: #1a73e8;
+            color: #4a63e7;
             text-decoration: none;
         }
 
@@ -84,53 +92,54 @@
 </head>
 <body>
 
-<!-- TOP HEADER -->
+<!-- HERO -->
 <div class="hero">
     <h1>PriceWatch</h1>
-    <p>Online alışverişte en doğru kararı vermenizi sağlayan; güvenilir, hızlı ve sade bir fiyat karşılaştırma ve fiyat takip çözümü.</p>
+    <p>
+        Farklı mağazalardaki ürün fiyatlarını tek ekranda karşılaştırmanıza ve fiyat düşüşlerini anlık olarak takip etmenize yardımcı olan modern bir mobil uygulama.
+    </p>
 </div>
 
 <!-- ABOUT -->
 <div class="section">
     <h2>PriceWatch Hakkında</h2>
     <p>
-        <strong>PriceWatch</strong>, kullanıcıların farklı e-ticaret platformlarında ürün arayabildiği,
-        fiyatları karşılaştırabildiği ve fiyat değişimlerini takip edebildiği bir mobil uygulamadır.
+        <strong>PriceWatch</strong>, kullanıcıların çeşitli e-ticaret platformlarında ürün arayabildiği, fiyat
+        karşılaştırması yapabildiği ve fiyat değişim bildirimleri alabileceği bir mobil uygulamadır.
     </p>
 
     <p>
-        Uygulama hâlâ geliştirme aşamasındadır. Bu sayfa, Amazon Product Advertising API, Trendyol Partner API,
-        CJ Affiliate (Hepsiburada) ve benzeri hizmetlerin entegrasyon onay sürecini desteklemek amacıyla hazırlanmıştır.
+        Uygulama geliştirme sürecindedir. Bu sayfa, Amazon Product Advertising API, Trendyol Partner API,
+        CJ Affiliate (Hepsiburada) ve diğer servislerin doğrulama ve entegrasyon süreçleri için hazırlanmıştır.
     </p>
 </div>
 
 <!-- FEATURES -->
 <div class="section">
-    <h2>Öne Çıkan Özellikler</h2>
+    <h2>Özellikler</h2>
 
     <div class="feature-list">
-        <div>Birden fazla e-ticaret platformunda ürün arama.</div>
-        <div>Aynı ürünün farklı mağazalardaki fiyatlarını karşılaştırma.</div>
-        <div>Seçilen ürünler için fiyat düşüş bildirimleri.</div>
-        <div>Kullanıcıyı her zaman ilgili mağazanın resmi sayfasına yönlendirme.</div>
-        <div>Hızlı, sade ve modern bir mobil arayüz.</div>
+        <div>Birden fazla e-ticaret platformunda ürün arama desteği.</div>
+        <div>Farklı mağazalardaki fiyatları tek ekrandan karşılaştırma.</div>
+        <div>Favori ürünler için fiyat düşüş bildirimleri.</div>
+        <div>Kullanıcıyı daima ilgili mağazanın resmi ürün sayfasına yönlendirme.</div>
+        <div>Sade, hızlı ve modern mobil arayüz tasarımı.</div>
     </div>
 </div>
 
-<!-- API INFO -->
+<!-- API INFORMATION -->
 <div class="section">
-    <h2>API Entegrasyonları</h2>
-    <p>Aşağıdaki servislerle resmi entegrasyon planlanmaktadır:</p>
+    <h2>Planlanan API Entegrasyonları</h2>
 
     <ul>
         <li>Amazon Product Advertising API</li>
         <li>Trendyol Partner API</li>
-        <li>CJ Affiliate (Hepsiburada ürün katalogları)</li>
+        <li>CJ Affiliate (Hepsiburada ürün feed'i)</li>
         <li>n11 API</li>
     </ul>
 
     <p>
-        PriceWatch herhangi bir satış işlemi gerçekleştirmez; tüm yönlendirmeler resmi ürün sayfalarına yapılır.
+        PriceWatch satış işlemi gerçekleştirmez. Tüm yönlendirmeler kullanıcıyı ilgili mağazanın kendi sayfasına taşır.
     </p>
 </div>
 
