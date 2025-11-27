@@ -289,3 +289,672 @@
             text-transform: uppercase;
             letter-spacing: 0.18em;
             font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .hero-right-header span.right-pill {
+            padding: 4px 9px;
+            border-radius: 999px;
+            border: 1px solid rgba(209, 213, 219, 0.4);
+            font-size: 10px;
+            background: rgba(15, 23, 42, 0.85);
+        }
+
+        .hero-right-card {
+            background: rgba(11, 15, 34, 0.98);
+            border-radius: 14px;
+            padding: 12px 12px 11px;
+            border: 1px solid rgba(148, 163, 255, 0.35);
+        }
+
+        .hero-right-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 6px 6px;
+            border-radius: 10px;
+            margin-bottom: 4px;
+        }
+
+        .hero-right-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .row-badge {
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 255, 0.5);
+            background: radial-gradient(circle at top left, rgba(148, 163, 255, 0.3), rgba(15, 23, 42, 0.98));
+            white-space: nowrap;
+        }
+
+        .row-labels {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 10px;
+            font-size: 11px;
+            color: #e5e7eb;
+        }
+
+        .row-labels small {
+            display: block;
+            font-size: 10px;
+            color: #9ca3af;
+        }
+
+        .row-price {
+            font-variant-numeric: tabular-nums;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .row-chip {
+            font-size: 10px;
+            padding: 3px 7px;
+            border-radius: 999px;
+            border: 1px solid rgba(52, 211, 153, 0.4);
+            color: #6ee7b7;
+            background: radial-gradient(circle at top, rgba(22, 163, 74, 0.18), rgba(15, 23, 42, 0.96));
+            white-space: nowrap;
+        }
+
+        .hero-right-foot {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            color: #9ca3af;
+        }
+
+        .hero-right-foot span.label {
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+        }
+
+        .hero-right-foot span.pill {
+            padding: 4px 7px;
+            border-radius: 999px;
+            border: 1px dashed rgba(148, 163, 255, 0.5);
+        }
+
+        /* SECTION BASE */
+        .section {
+            margin-top: 36px;
+        }
+
+        .section-header {
+            margin-bottom: 18px;
+        }
+
+        .section-eyebrow {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--text-soft);
+            margin-bottom: 4px;
+        }
+
+        .section-title {
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 6px;
+        }
+
+        .section-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            max-width: 640px;
+        }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+            gap: 26px;
+        }
+
+        .about-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--card-border);
+            padding: 16px 18px;
+        }
+
+        .about-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 0 0 10px;
+        }
+
+        .about-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-meta-item {
+            font-size: 12px;
+            color: var(--text-soft);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .about-meta-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .meta-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .about-highlight {
+            border-radius: var(--radius-lg);
+            border: 1px dashed rgba(148, 163, 255, 0.4);
+            padding: 14px 16px;
+            font-size: 12px;
+            color: var(--text-soft);
+            background: radial-gradient(circle at top left, rgba(88, 101, 242, 0.2), rgba(7, 11, 31, 0.96));
+        }
+
+        .about-highlight strong {
+            color: #e5e7eb;
+        }
+
+        /* FEATURES */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 13px;
+            border: 1px solid var(--card-border);
+            padding: 14px 14px 13px;
+            font-size: 13px;
+            color: var(--text-muted);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left, rgba(74, 99, 231, 0.18), transparent 55%);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--text-soft);
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #e5e7eb;
+        }
+
+        /* TRUST & API INFO */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            gap: 18px;
+        }
+
+        .trust-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--card-border);
+            padding: 14px 16px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .trust-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .trust-list li {
+            margin-bottom: 7px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .trust-list li::before {
+            content: "●";
+            font-size: 8px;
+            margin-top: 4px;
+            color: #22c55e;
+        }
+
+        .api-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .api-badge {
+            font-size: 11px;
+            padding: 6px 9px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(148, 163, 255, 0.45);
+            color: #e5e7eb;
+        }
+
+        .api-note {
+            font-size: 12px;
+            color: var(--text-soft);
+            margin-top: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: auto;
+            border-top: 1px solid rgba(148, 163, 255, 0.26);
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.96), rgba(30, 64, 175, 0.85));
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 14px 20px 18px;
+            font-size: 12px;
+            color: #e5e7eb;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: right;
+        }
+
+        .footer-right a {
+            color: #e0e7ff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 880px) {
+            .hero {
+                grid-template-columns: minmax(0,1fr);
+            }
+
+            .hero-right {
+                order: -1;
+            }
+
+            .about-grid,
+            .features-grid,
+            .trust-grid {
+                grid-template-columns: minmax(0,1fr);
+            }
+
+            .footer-inner {
+                text-align: left;
+            }
+
+            .footer-right {
+                text-align: left;
+            }
+
+            .nav-right {
+                display: none;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .hero-subtitle,
+            .hero-sub-sub {
+                max-width: none;
+            }
+
+            .hero-right {
+                padding: 14px 14px 12px;
+            }
+
+            .section {
+                margin-top: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <main class="max-width">
+
+        <!-- TOP NAV -->
+        <header class="top-nav">
+            <div class="brand">
+                <div class="brand-logo">P</div>
+                <div class="brand-text">
+                    <span>PriceWatch</span>
+                    <span>Fiyat takibi ve karşılaştırma</span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="nav-pill">
+                    <span class="nav-dot"></span>
+                    Geliştirme sürümü • 2025
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div>
+                <div class="hero-left-badge">
+                    <span class="tag">PriceWatch</span>
+                    <span>API tabanlı fiyat izleme uygulaması</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Fiyatlar <span class="gradient">tek ekranda,</span> değişimleri anlık takip edin.
+                </h1>
+
+                <p class="hero-subtitle">
+                    PriceWatch, farklı e-ticaret platformlarındaki ürün fiyatlarını tek ekranda
+                    karşılaştırmanızı ve favori ürünlerinizdeki fiyat değişimlerini güvenli şekilde izlemenizi
+                    sağlayan modern bir mobil uygulamadır.
+                </p>
+
+                <p class="hero-sub-sub">
+                    Uygulama şu anda aktif geliştirme aşamasındadır. Bu sayfa, özellikle
+                    <strong>Amazon Product Advertising API</strong>, <strong>Trendyol Partner API</strong>,
+                    <strong>CJ Affiliate</strong> ve benzeri servislerin doğrulama ve entegrasyon süreçleri için
+                    hazırlanmış resmi bilgilendirme sayfasıdır.
+                </p>
+
+                <div class="hero-actions">
+                    <button class="btn-primary" type="button">
+                        Canlıya geçiş öncesi teknik inceleme
+                        <span class="icon">↗</span>
+                    </button>
+
+                    <button class="btn-ghost" type="button">
+                        <span class="dot"></span>
+                        API entegrasyonları etkinleştiriliyor
+                    </button>
+                </div>
+
+                <div class="hero-meta">
+                    <div class="hero-meta-item">
+                        <span class="badge">Satış işlemi yapmaz</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        Farklı mağazalara resmi yönlendirme
+                    </div>
+                    <div class="hero-meta-item">
+                        Cihaz içi favori takibi • Bildirim desteği
+                    </div>
+                </div>
+            </div>
+
+            <aside class="hero-right" aria-label="Örnek fiyat karşılaştırma görünümü">
+                <div class="hero-right-header">
+                    <span class="left-label">Örnek fiyat karşılaştırma</span>
+                    <span class="right-pill">Mock veri • Demo arayüz</span>
+                </div>
+
+                <div class="hero-right-card">
+                    <div class="hero-right-row" style="background: rgba(15,23,42,0.9);">
+                        <span class="row-badge">Kablosuz Kulaklık</span>
+                        <div class="row-labels">
+                            <div>
+                                Amazon
+                                <small>Resmi ürün sayfasına yönlendirme</small>
+                            </div>
+                            <div>
+                                Trendyol
+                                <small>Onaylı mağaza</small>
+                            </div>
+                        </div>
+                        <div class="row-price">₺1.299</div>
+                    </div>
+
+                    <div class="hero-right-row">
+                        <span class="row-badge">Akıllı Saat</span>
+                        <div class="row-labels">
+                            <div>
+                                Hepsiburada
+                                <small>CJ Affiliate feed</small>
+                            </div>
+                            <div>
+                                n11
+                                <small>Resmi mağaza</small>
+                            </div>
+                        </div>
+                        <div class="row-price">₺2.449</div>
+                        <span class="row-chip">-8% son 7 gün</span>
+                    </div>
+                </div>
+
+                <div class="hero-right-foot">
+                    <span class="label">Gerçek zamanlı değil • Demo</span>
+                    <span class="pill">Tüm fiyatlar sadece örnek amaçlı gösterilmektedir.</span>
+                </div>
+            </aside>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="section-header">
+                <div class="section-eyebrow">Uygulama hakkında</div>
+                <h2 class="section-title">PriceWatch nedir ve nasıl çalışır?</h2>
+                <p class="section-desc">
+                    PriceWatch, farklı e-ticaret platformlarından gelen resmi ürün verilerini bir araya getirerek
+                    kullanıcılara şeffaf ve güncel fiyat karşılaştırma deneyimi sunmayı hedefleyen bir mobil
+                    uygulamadır. Uygulama, fiyat takibini kolaylaştırmak için bildirim ve favori listeleri gibi
+                    fonksiyonlarla desteklenir.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <p>
+                        Kullanıcılar, mobil uygulama üzerinden ürün araması yaptığında, yalnızca resmi ve izinli
+                        veri kaynaklarına (örneğin e-ticaret platformlarının kendi API servisleri veya onaylı
+                        affiliate feed’leri) başvurulur.
+                    </p>
+                    <p>
+                        Uygulama <strong>satış işlemi gerçekleştirmez</strong>, sepet ve ödeme adımlarına
+                        aracılık etmez; kullanıcılar ilgili platformun kendi web veya mobil uygulamasına
+                        yönlendirilir.
+                    </p>
+
+                    <div class="about-meta-item">
+                        <span class="meta-dot"></span>
+                        Kart bilgisi veya doğrudan ödeme verisi tutmaz.
+                    </div>
+                    <div class="about-meta-item">
+                        <span class="meta-dot"></span>
+                        Kullanıcı davranışı analizi yalnızca anonim ve toplu istatistiklerle yapılır.
+                    </div>
+                </div>
+
+                <div class="about-highlight">
+                    <strong>Geliştirme durumu (2025):</strong><br>
+                    Uygulama aktif geliştirme sürecindedir. Bu sayfa; Amazon, Trendyol, Hepsiburada (CJ Affiliate) ve
+                    n11 gibi servislerin <strong>API erişim başvurusu sırasında inceleyebileceği</strong>, kalıcı ve
+                    güncellenebilir bir referans noktası olarak tasarlanmıştır.
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="section" id="features">
+            <div class="section-header">
+                <div class="section-eyebrow">Öne çıkan özellikler</div>
+                <h2 class="section-title">Kullanıcı odaklı, sade ve güvenli deneyim</h2>
+                <p class="section-desc">
+                    PriceWatch, kullanıcıyı karmaşık ekranlar yerine, açık ve karşılaştırılabilir bilgilere
+                    yönlendirir. Tüm yönlendirmeler resmi mağaza sayfalarına yapılır ve kullanıcıya, satın alma
+                    kararı için net bir özet sunulur.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-label">Karşılaştırma</div>
+                    <h3 class="feature-title">Çoklu mağaza görünümü</h3>
+                    <p>
+                        Bir ürün için Amazon, Trendyol, Hepsiburada (affiliate) ve n11 gibi mağazalardaki fiyatlar
+                        tek ekranda listelenir; kullanıcı doğrudan tercih ettiği mağazaya yönlendirilebilir.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-label">Takip</div>
+                    <h3 class="feature-title">Fiyat alarmları ve favoriler</h3>
+                    <p>
+                        Kullanıcı belirlediği ürünleri favorilerine ekleyebilir; önemli fiyat hareketlerinde
+                        bildirim alır. Eşik değere göre uyarı ve takip seçenekleri sunulur.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-label">Tasarım</div>
+                    <h3 class="feature-title">Modern ve sade arayüz</h3>
+                    <p>
+                        Mobil uygulama tasarımı temiz, hızlı ve erişilebilir olacak şekilde planlanmıştır. Kullanıcı
+                        gereksiz görsel karmaşa olmadan bilgiye odaklanabilir.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-label">Şeffaflık</div>
+                    <h3 class="feature-title">Açık fiyat kaynağı bilgisi</h3>
+                    <p>
+                        Her ürün kartında, fiyatın hangi platformdan ve hangi resmi servisten (örneğin API veya
+                        affiliate feed) geldiği açıkça gösterilir.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-label">Güvenlik</div>
+                    <h3 class="feature-title">Veri gizliliği önceliği</h3>
+                    <p>
+                        Kullanıcıların kişisel verileri yalnızca uygulama işlevleri için gerekli olduğu kadar işlenir;
+                        ödeme bilgisi tutulmaz ve yetkisiz veri paylaşımı yapılmaz.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-label">Uyumluluk</div>
+                    <h3 class="feature-title">Platform kurallarına saygı</h3>
+                    <p>
+                        PriceWatch, hiçbir platformun kullanım şartlarını ihlal edecek tekniklere (örneğin izinsiz
+                        scraping) başvurmaz; yalnızca resmi ve belgelenmiş entegrasyonları kullanmayı hedefler.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- TRUST & API INFO -->
+        <section class="section" id="api">
+            <div class="section-header">
+                <div class="section-eyebrow">Planlanan API entegrasyonları</div>
+                <h2 class="section-title">Resmi, izinli ve dokümante edilmiş veri kaynakları</h2>
+                <p class="section-desc">
+                    PriceWatch, fiyat verilerini yalnızca resmi, belgelenmiş ve kullanım şartları açıkça belirtilmiş
+                    kaynaklardan almayı hedefler. Aşağıda, entegrasyon planı ve güvenlik yaklaşımımız özetlenmiştir.
+                </p>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <h3 style="margin:0 0 6px; font-size:14px; font-weight:600; color:#e5e7eb;">
+                        Planlanan API ve feed entegrasyonları
+                    </h3>
+                    <ul class="trust-list">
+                        <li>Amazon Product Advertising API (ürün bilgisi ve fiyat verisi)</li>
+                        <li>Trendyol Partner API (ürün ve fiyat verisi, mağaza bilgisi)</li>
+                        <li>CJ Affiliate üzerinden Hepsiburada ürün feed’i</li>
+                        <li>n11 API (resmi mağaza verileri ve fiyat bilgisi)</li>
+                    </ul>
+
+                    <div class="api-badges" aria-label="API ve entegrasyon rozetleri">
+                        <span class="api-badge">Sadece izinli API kullanımı</span>
+                        <span class="api-badge">Affiliate &amp; partner program uyumu</span>
+                        <span class="api-badge">Günlük senkronizasyon planı</span>
+                    </div>
+
+                    <p class="api-note">
+                        PriceWatch satış işlemi gerçekleştirmez; kullanıcıyı yalnızca ilgili mağazanın resmi
+                        sayfasına yönlendirir. Sipariş, kargo ve iade süreçleri tamamen ilgili platform tarafından
+                        yönetilir.
+                    </p>
+                </div>
+
+                <div class="trust-card">
+                    <h3 style="margin:0 0 6px; font-size:14px; font-weight:600; color:#e5e7eb;">
+                        Güvenilirlik ve uyumluluk yaklaşımı
+                    </h3>
+                    <ul class="trust-list">
+                        <li>Tüm fiyat gösterimleri, platformların izin verdiği format ve içerik sınırlarına
+                            uygun şekilde tasarlanır.</li>
+                        <li>Uygulama, kullanım şartlarını ihlal edebilecek scraping, headless tarayıcı vb.
+                            tekniklere başvurmaz.</li>
+                        <li>Kullanıcı davranışı analitiği yalnızca ürün iyileştirme amacıyla, anonim metrikler
+                            üzerinden takip edilir.</li>
+                        <li>API sağlayıcıları talep ettiğinde, teknik detaylar ve erişim kayıtları paylaşılabilir.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div>© 2025 PriceWatch • Tüm hakları saklıdır.</div>
+                <div style="opacity:0.8;">
+                    Bu sayfa, PriceWatch mobil uygulamasının API ve entegrasyon doğrulama süreci için hazırlanmıştır.
+                </div>
+            </div>
+            <div class="footer-right">
+                <div>İletişim e-posta:</div>
+                <div>
+                    <a href="mailto:ograssezer474@gmail.com">ograssezer474@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
