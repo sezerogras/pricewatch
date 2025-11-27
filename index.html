@@ -3,123 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PriceWatch - Çoklu E-Ticaret Fiyat Karşılaştırma ve Fiyat Takip Uygulaması</title>
+    <title>PriceWatch | Akıllı Fiyat Karşılaştırma ve Fiyat Takip Uygulaması</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background: #f5f5f5;
-            color: #333;
+            font-family: "Inter", Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #2d2d2d;
+            line-height: 1.6;
         }
-        header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            padding: 60px 20px;
+
+        /* Header */
+        .hero {
+            background: linear-gradient(135deg, #0a2342, #185adb);
+            padding: 90px 20px;
             text-align: center;
             color: white;
         }
-        header h1 {
+
+        .hero h1 {
             font-size: 48px;
-            margin: 0;
             font-weight: 800;
+            margin-bottom: 10px;
         }
-        header p {
-            font-size: 18px;
-            margin-top: 12px;
-            opacity: 0.9;
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
         }
-        section {
+
+        /* Section */
+        .section {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 50px auto;
             background: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.08);
         }
+
         h2 {
             margin-top: 0;
             font-weight: 700;
+            font-size: 28px;
+            color: #0a2342;
         }
-        .features {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-        .feature {
-            padding: 16px;
-            border-left: 5px solid #2a5298;
-            background: #f0f4ff;
+
+        .feature-box {
+            border-left: 4px solid #185adb;
+            padding-left: 15px;
+            margin-bottom: 18px;
+            background: #f1f5ff;
+            padding: 15px;
             border-radius: 6px;
         }
+
+        /* Screenshots */
         .screenshots img {
             width: 100%;
-            margin-top: 10px;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            margin-top: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
         }
+
+        /* Footer */
         footer {
+            margin-top: 60px;
             text-align: center;
             padding: 25px;
-            background: #1e1e1e;
+            background: #0a2342;
             color: white;
-            margin-top: 50px;
         }
+
         a {
-            color: #2a5298;
+            color: #185adb;
+            text-decoration: none;
         }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
     <h1>PriceWatch</h1>
-    <p>Amazon, Trendyol, Hepsiburada, n11 ve daha birçok platform için fiyat karşılaştırma & fiyat takibi mobil uygulaması.</p>
-</header>
+    <p>Online alışverişte en doğru kararı vermenizi sağlayan; hızlı, güvenilir ve akıllı bir fiyat karşılaştırma ve fiyat takip uygulaması.</p>
+</div>
 
-<section>
-    <h2>Hakkında</h2>
-    <p><strong>PriceWatch</strong>, kullanıcıların çeşitli e-ticaret platformlarında ürün arayabileceği, fiyatları karşılaştırabileceği ve favori ürünleri için fiyat düşünce bildirim alabileceği modern bir mobil uygulamadır.</p>
-    <p>Uygulama henüz geliştirme aşamasındadır. Bu tanıtım sayfası, Amazon PA API, Trendyol Partner API, CJ Affiliate (Hepsiburada) ve diğer entegrasyon sağlayıcılarının onay süreçleri için hazırlanmıştır.</p>
-</section>
+<!-- ABOUT -->
+<div class="section">
+    <h2>Uygulama Hakkında</h2>
+    <p>
+        <strong>PriceWatch</strong>, kullanıcıların farklı e-ticaret platformlarında ürün arayabildiği, fiyat karşılaştırması yapabildiği ve fiyat düşüşlerini takip edebildiği bir mobil uygulamadır.
+    </p>
+    <p>
+        Uygulama halen geliştirme aşamasındadır. Bu sayfa, Amazon Product Advertising API, Trendyol Partner API, CJ Affiliate (Hepsiburada) ve diğer çözüm ortaklarının onay süreçlerini desteklemek amacıyla hazırlanmıştır.
+    </p>
+</div>
 
-<section>
-    <h2>Özellikler</h2>
-    <div class="features">
-        <div class="feature"><strong>🔍 Çoklu Platform Arama:</strong> Kullanıcı bir ürün adı girer, PriceWatch Amazon, Trendyol, Hepsiburada, n11 gibi sitelerden en uygun sonuçları listeler.</div>
-        <div class="feature"><strong>💰 Fiyat Karşılaştırma:</strong> Aynı ürün çeşitli mağazalardan çekilerek tek ekranda fiyat karşılaştırması yapılır.</div>
-        <div class="feature"><strong>📉 Fiyat Takibi:</strong> Kullanıcı bir ürünü takip eder; fiyat belirlenen eşiğin altına düştüğünde bildirim alır.</div>
-        <div class="feature"><strong>🔗 Orijinal Mağazaya Yönlendirme:</strong> Kullanıcı ürüne tıklayınca doğrudan ilgili mağazanın resmi sayfasına yönlendirilir.</div>
-        <div class="feature"><strong>📱 Flutter ile Geliştirilen Modern Arayüz:</strong> Hızlı, şık ve kullanıcı dostu tasarım.</div>
+<!-- FEATURES -->
+<div class="section">
+    <h2>Öne Çıkan Özellikler</h2>
+
+    <div class="feature-box">
+        Çoklu platform üzerinden ürün arama: Amazon, Trendyol, Hepsiburada, n11 ve diğer seçili mağazalar.
     </div>
-</section>
 
-<section>
-    <h2>Ekran Taslakları</h2>
-    <p>Uygulamaya ait taslak ekran görüntüleri (placeholder görseller):</p>
+    <div class="feature-box">
+        Aynı ürünün farklı mağazalardaki fiyatlarını tek ekranda karşılaştırma.
+    </div>
+
+    <div class="feature-box">
+        Seçilen ürünler için fiyat düşüşü bildirimleri alma.
+    </div>
+
+    <div class="feature-box">
+        Ürünlere tıklandığında kullanıcıların daima resmi e-ticaret mağazasına yönlendirilmesi.
+    </div>
+
+    <div class="feature-box">
+        Modern ve yalın bir mobil kullanıcı arayüzü (Flutter ile geliştirilmiştir).
+    </div>
+</div>
+
+<!-- SCREENSHOTS -->
+<div class="section">
+    <h2>Tasarım Önizlemeleri</h2>
+    <p>Aşağıda uygulamanın geliştirme aşamasındaki ön taslak ekran görüntüleri yer almaktadır.</p>
+
     <div class="screenshots">
-        <img src="https://via.placeholder.com/880x420?text=PriceWatch+-+Ana+Sayfa">
-        <img src="https://via.placeholder.com/880x420?text=PriceWatch+-+Arama+Sonuclari">
-        <img src="https://via.placeholder.com/880x420?text=PriceWatch+-+Urun+Detay+%26+Fiyat+Takibi">
+        <img src="https://via.placeholder.com/880x420/0a2342/ffffff?text=PriceWatch+Ana+Ekran+Tasarımı">
+        <img src="https://via.placeholder.com/880x420/185adb/ffffff?text=Arama+Sonuçları+Önizleme">
+        <img src="https://via.placeholder.com/880x420/0a2342/ffffff?text=Ürün+Detay+ve+Fiyat+Takibi">
     </div>
-</section>
+</div>
 
-<section>
-    <h2>API Kullanım Amacı</h2>
-    <p>PriceWatch aşağıdaki e-ticaret platformlarıyla resmi API veya ürün feed’i üzerinden entegre olacaktır:</p>
+<!-- API USAGE -->
+<div class="section">
+    <h2>API Entegrasyon Amaçları</h2>
+    <p>
+        PriceWatch, resmi API sağlayıcılarıyla entegre çalışmak üzere tasarlanmıştır. Kullanılacak servisler:
+    </p>
+
     <ul>
         <li>Amazon Product Advertising API</li>
         <li>Trendyol Partner API</li>
         <li>CJ Affiliate (Hepsiburada ürün katalogları)</li>
-        <li>n11 API (ürün ve fiyat verileri)</li>
+        <li>n11 API</li>
     </ul>
 
-    <p>Uygulama herhangi bir satış gerçekleştirmez. Kullanıcılar ürünlere tıkladıklarında her zaman orijinal mağazaya yönlendirilir.</p>
-    <p>Bu sayfa yalnızca geliştirilmekte olan PriceWatch mobil uygulaması için API onay süreçlerini desteklemek amacıyla hazırlanmıştır.</p>
-</section>
+    <p>
+        PriceWatch herhangi bir satış işlemi gerçekleştirmez; tüm yönlendirmeler kullanıcıyı doğrudan ilgili mağazanın resmi ürün sayfasına götürür.
+    </p>
+</div>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2025 PriceWatch — Geliştirme aşamasında bir mobil uygulama</p>
-    <p>İletişim: <a href="mailto:ograssezer474@gmail.com">ograssezer474@gmail.com</a></p>
+    © 2025 PriceWatch • Tüm hakları saklıdır<br>
+    İletişim: <a href="mailto:ograssezer474@gmail.com">ograssezer474@gmail.com</a>
 </footer>
 
 </body>
